@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddPart">
+   <children>
+      <GridPane>
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <StackPane>
+               <children>
+                  <Label text="Add Part">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+            <StackPane GridPane.rowIndex="1">
+               <children>
+                  <Label text="ID" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.rowIndex="2">
+               <children>
+                  <Label text="Name" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.rowIndex="3">
+               <children>
+                  <Label text="Inv" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.rowIndex="4">
+               <children>
+                  <Label text="Price/Cost" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.rowIndex="5">
+               <children>
+                  <Label text="Max" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.rowIndex="6">
+               <children>
+                  <Label fx:id="manufactureLabel" text="Machine ID" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <children>
+                  <Label text="Min" />
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="1">
+               <children>
+                  <RadioButton fx:id="inhouseRadio" mnemonicParsing="false" onAction="#onInhouseRadio" selected="true" text="In-House">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="tGroup" />
+                     </toggleGroup>
+                  </RadioButton>
+               </children>
+            </StackPane>
+            <StackPane GridPane.columnIndex="2">
+               <children>
+                  <RadioButton fx:id="outsourcedRadio" mnemonicParsing="false" onAction="#onOutsourcedRadio" text="Outsourced" toggleGroup="$tGroup" />
+               </children>
+            </StackPane>
+            <TextField fx:id="idTextField" disable="true" promptText=" Auto Gen-Disabled" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font></TextField>
+            <TextField fx:id="nameTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="stockTextField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="priceTextField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="maxTextField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="minTextField" GridPane.columnIndex="3" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="manufactureTextField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Button fx:id="saveButton" mnemonicParsing="false" onAction="#onSaveButton" text="Save" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#onCancelButton" text="Cancel" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+            <Label fx:id="addPartErrorLabel" textFill="RED" wrapText="true" GridPane.columnSpan="2" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+         </children>
+      </GridPane>
+   </children>
+</StackPane>
