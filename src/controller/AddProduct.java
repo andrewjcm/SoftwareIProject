@@ -18,6 +18,7 @@ import java.util.ResourceBundle;
 
 /**
  * Class object for the add product view.
+ * First Update.
  * @author Andrew Cesar-Metzgus
  */
 public class AddProduct implements Initializable {
